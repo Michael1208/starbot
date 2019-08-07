@@ -26,4 +26,4 @@ async def ping(ctx):
 
 
 
-bot.run("NjA2MjUyMjgzNDQ5MzExMjQ2.XULZhQ.MvCanQTQz11FjpxQ694BTUreSTk")
+bot.run("Your token here")
