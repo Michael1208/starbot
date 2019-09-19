@@ -13,7 +13,8 @@ from discord import Game, Embed, Color, Status, ChannelType
 
 
 Forbidden= discord.Embed(title="Permission Denied", description="1) Please check whether you have permission to perform this action or not. \n2) Please check whether my role has permission to perform this action in this channel or not. \n3) Please check my role position.", color=0x00ff00)
-client = Bot(description="DarkBot Bot is best", command_prefix="d!", pm_help = True)
+client = Bot(description="DarkBot Bot is best", command_prefix=".", pm_help = True)
+TOKEN = os.environ['TOKEN']
 client.remove_command('help')
 
 
@@ -41,7 +42,7 @@ async def on_ready():
   
 	
 def is_owner(ctx):
-    return ctx.message.author.id == "420525168381657090, 395535610548322326"
+    return ctx.message.author.id == "505366642230951984"
 
 def is_dark(ctx):
     return ctx.message.author.id == "420525168381657090"
@@ -826,4 +827,4 @@ async def embed(ctx, *args):
     await client.delete_message(ctx.message)
 
 
-client.run(os.getenv('Token'))
+client.run(TOKEN)
